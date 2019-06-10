@@ -8,6 +8,7 @@ import java.util.Arrays;
  */
 public class BubbleSort extends ArraySort{
 
+    // 冒泡排序，平均时间复杂度O(n^2)，空间复杂度O(1)，稳定
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
