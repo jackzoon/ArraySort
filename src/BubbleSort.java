@@ -22,6 +22,25 @@ public class BubbleSort extends ArraySort{
         }
     }
 
+    public static void bubbleSort_2(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        boolean sorted = true;
+        for (int i = 0; i < arr.length - 1; i++) {
+            sorted = true;
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    swap(arr,j,j+1);
+                    sorted = false;
+                }
+            }
+            if (sorted) {
+                break;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int testTime = 5000;
         int maxSize= 100;
@@ -30,7 +49,7 @@ public class BubbleSort extends ArraySort{
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = generateRandomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
-            bubbleSort(arr1);
+            bubbleSort_2(arr1);
             comparator(arr2);
             if (!isEqual(arr1, arr2)) {
                 succeed = false;
