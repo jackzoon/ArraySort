@@ -5,6 +5,7 @@ import java.util.Arrays;
  * @version 1.0
  * @date 2019/6/10 19:22
  * 冒泡排序
+ * 双层循环，时间复杂度为O(n^2)
  */
 public class BubbleSort extends ArraySort{
 
