@@ -32,8 +32,8 @@ public class BubbleSort extends ArraySort{
             sorted = true;
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr,j,j+1);
                     sorted = false;
+                    swap(arr,j,j+1);
                 }
             }
             if (sorted) {
