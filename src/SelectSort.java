@@ -16,10 +16,9 @@ public class SelectSort extends ArraySort{
             for (int j = i + 1; j < arr.length; j++) {
                 minIndex = arr[j] < arr[minIndex] ? j : minIndex;
             }
-            swap(arr, i, minIndex);
+            swap(arr,i,minIndex);
         }
     }
-
 
     public static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
