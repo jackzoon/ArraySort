@@ -30,10 +30,10 @@ public class BubbleSort extends ArraySort{
         boolean sorted = true;
         for (int i = 0; i < arr.length - 1; i++) {
             sorted = true;
-            for (int j = 0; j < arr.length - 1 - i; j++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     sorted = false;
-                    swap(arr,j,j+1);
+                    swap(arr, j, j + 1);
                 }
             }
             if (sorted) {
